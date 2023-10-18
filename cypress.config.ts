@@ -1,6 +1,5 @@
 import { defineConfig } from "cypress";
-const cypressSplit = require('cypress-split');
-
+const cypressSplit = require("cypress-split");
 
 export default defineConfig({
   e2e: {
@@ -8,5 +7,6 @@ export default defineConfig({
       cypressSplit(on, config);
       return config;
     },
+    specPattern: './**.spec.ts',
   },
 });
