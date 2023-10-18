@@ -4,6 +4,8 @@
     "target": "es6",
     "lib": ["esnext", "dom"],
     "types": ["cypress"],
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
   },
   "include": ["**/*.ts"]
 }
