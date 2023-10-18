@@ -21,6 +21,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         SPLIT: 1
-        SPLIT_INDEX: 1
+        SPLIT_INDEX: 0
     
 
