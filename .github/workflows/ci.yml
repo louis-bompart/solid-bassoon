@@ -1,0 +1,26 @@
+name: Hello World
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    - name: Install Dependencies
+      run: npm install
+    - uses: cypress-io/github-action@v5
+      name: Run Cypress
+      with:
+        browser: chrome
+        command-prefix: 'npx cypress-repeat run -n 3 --until-passes --rerun-failed-only --'
+        install: false
+        record: false
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        SPLIT: 1
+        SPLIT_INDEX: 1
+    
+

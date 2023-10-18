@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "cypress": "^13.3.1",
+    "cypress-repeat": "^2.3.4",
+    "cypress-split": "^1.15.0",
+    "typescript": "^5.2.2"
+  }
+}
