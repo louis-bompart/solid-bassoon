@@ -15,6 +15,7 @@ jobs:
       name: Run Cypress
       with:
         browser: chrome
+        spec: '**/*.spec.ts'
         command-prefix: 'npx cypress-repeat run -n 3 --until-passes --rerun-failed-only --'
         install: false
         record: false
